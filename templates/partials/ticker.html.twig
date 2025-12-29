@@ -1,0 +1,13 @@
+{% if ticker_items is not empty %}
+    <div class="ticker-wrap"
+            {% if background_color is not empty %}
+                style="background-color: {{ background_color }} !important"
+            {% endif %}
+    >
+        <div class="ticker" id="{{ ticker_id }}" style="-webkit-animation-duration: {{ duration }}; animation-duration: {{ duration }};">
+            {% for item in ticker_items %}
+                <div class="ticker__item">{{ item|raw }}</div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

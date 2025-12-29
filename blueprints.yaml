@@ -1,0 +1,31 @@
+name: Shortcode Ticker
+slug: shortcode-ticker
+type: plugin
+version: 1.0.0
+description: "This plugin provides a shortcode for an animated horizontal news ticker"
+icon: newspaper
+author:
+  name: Volker Götz
+  email: volker.goetz@goetz-it-solutions.de
+homepage: https://github.com/VolkerGoetz/grav-plugin-shortcode-ticker
+keywords: shortcode, ticker
+bugs: https://github.com/VolkerGoetz/grav-plugin-shortcode-ticker/issues
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+  - { name: shortcode-core, version: '>=5.3.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool

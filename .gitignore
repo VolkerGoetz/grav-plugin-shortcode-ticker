@@ -1,0 +1,15 @@
+# IDEs
+.idea/
+.vscode/
+workspace.code-workspace
+
+# files
+*.bak
+*.orig
+*.rej
+*.swp
+*~
+.DS_Store
+.ash_history
+.env
+.php_cs.*
