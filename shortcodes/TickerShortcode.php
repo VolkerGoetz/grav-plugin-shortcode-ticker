@@ -16,7 +16,8 @@ class TickerShortcode extends Shortcode
             $this->shortcode->addAssets('css', 'plugin://shortcode-ticker/css/shortcode.ticker.min.css');
 
             $bgColor = $sc->getParameter('background-color', '');
-            $duration = $sc->getParameter('duration', '30s');
+            $duration = $sc->getParameter('duration', 'auto');
+            $itemDuration = $sc->getParameter('item-duration', '5s');
             $separator = $sc->getParameter('separator', '');
 
             $content = $sc->getContent();
@@ -28,6 +29,17 @@ class TickerShortcode extends Shortcode
             $content = str_replace("</li>", "", $content);
 
             $items = array_filter(explode("<li>", $content), fn($value) => trim($value) !== '');
+
+            if ($duration === 'auto') {
+                if (preg_match('/(\d+)(\D*)/', $itemDuration, $matches)) {
+                    $duration = ((int)$matches[1]) * count($items);
+                    if (count($matches) > 1) {
+                        $duration = "$duration" . $matches[2];
+                    }
+                } else {
+                    $duration = '30s';
+                }
+            }
 
             $output = $this->twig->processTemplate('partials/ticker.html.twig', [
                 'ticker_id' => $id,

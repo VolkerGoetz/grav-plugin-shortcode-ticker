@@ -29,7 +29,7 @@ the [Admin Plugin](https://learn.getgrav.org/17/admin-panel/plugins)
 Add the `ticker`shortcode with the ticker items as content:
 
 ```markdown
-[ticker background-color=#fcf8f2 duration=15s separator=+++]
+[ticker background-color=#fcf8f2 duration=auto item-duration=5s separator=+++]
 
 - The first item
 - [Some text with a link](/news/sample-item)
@@ -52,12 +52,23 @@ Sets the background color for the news ticker box
 
 ### duration
 
-Type: **Duration**  
+Type: **Duration** or **fixed String** `auto`  
 Optional: yes  
-Default: `30s`
+Default: `auto`
 
-Time until the ticker animation starts over. Should be adapted to the number
-of ticker entries
+Time until the ticker animation starts over. If set to `auto` the actual value
+is automatically calculated by multiplying the value of `item-duration` with
+the numbers of items in the ticker. If set to an actual duration, the value
+should be adapted to the number of ticker entries.
+
+### item-duration
+
+Type: **Duration**  
+Optional: yes if `duration` is not set to `auto`  
+Default: `5s`
+
+Time for one ticker item until the ticker animation starts over. The value is
+multiplied with the number of items and used for `duration`.
 
 ### separator
 
