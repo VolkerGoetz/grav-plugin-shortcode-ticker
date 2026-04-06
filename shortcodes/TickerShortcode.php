@@ -17,6 +17,7 @@ class TickerShortcode extends Shortcode
 
             $bgColor = $sc->getParameter('background-color', '');
             $duration = $sc->getParameter('duration', '30s');
+            $separator = $sc->getParameter('separator', '');
 
             $content = $sc->getContent();
             $content = str_replace("\n", " ", $content);
@@ -33,6 +34,7 @@ class TickerShortcode extends Shortcode
                 'ticker_items' => $items,
                 'background_color' => $bgColor,
                 'duration' => $duration,
+                'separator' => $separator,
             ]);
 
             return $output;

@@ -7,12 +7,18 @@
         <ul style="animation-duration: {{ duration }};">
             <li>&ZeroWidthSpace;</li>
             {% for item in ticker_items %}
+                {% if separator is not empty %}
+                    <li>{{ separator }}</li>
+                {% endif %}
                 <li>{{ item|raw }}</li>
             {% endfor %}
         </ul>
         <ul aria-hidden="true" style="animation-duration: {{ duration }};">
             <li>&ZeroWidthSpace;</li>
             {% for item in ticker_items %}
+                {% if separator is not empty %}
+                    <li>{{ separator }}</li>
+                {% endif %}
                 <li>{{ item|raw }}</li>
             {% endfor %}
         </ul>

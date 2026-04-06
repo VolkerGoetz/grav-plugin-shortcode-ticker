@@ -4,6 +4,7 @@
 1. [](#new)
    * based on Optimistic Web's Infinite Scroll Animation Effect
      Using Only CSS
+   * new configuration parameter `separator`
 2. [](#improved)
    * no gap when the last item scrolls in, the first item immediately follows
      the last one

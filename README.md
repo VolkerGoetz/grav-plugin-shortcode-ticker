@@ -29,7 +29,7 @@ the [Admin Plugin](https://learn.getgrav.org/17/admin-panel/plugins)
 Add the `ticker`shortcode with the ticker items as content:
 
 ```markdown
-[ticker background-color=#fcf8f2 duration=15s]
+[ticker background-color=#fcf8f2 duration=15s separator=+++]
 
 - The first item
 - [Some text with a link](/news/sample-item)
@@ -58,3 +58,11 @@ Default: `30s`
 
 Time until the ticker animation starts over. Should be adapted to the number
 of ticker entries
+
+### separator
+
+Type: **String**  
+Optional: yes  
+Default: ``
+
+Optional string which is displayed between items, e.g. `+++`
