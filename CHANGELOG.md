@@ -1,6 +1,12 @@
 # v2.0.0
 ## 07-04-2026
 
+1. [](#bugfix)
+    * fixed blueprint version number
+
+# v2.0.0
+## 07-04-2026
+
 1. [](#new)
    * based on Optimistic Web's Infinite Scroll Animation Effect
      Using Only CSS
