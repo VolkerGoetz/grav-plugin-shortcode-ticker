@@ -1,4 +1,10 @@
-# v2.0.0
+# v2.0.2
+## 07-04-2026
+
+1. [](#bugfix)
+    * fixed changelog version number
+
+# v2.0.1
 ## 07-04-2026
 
 1. [](#bugfix)
