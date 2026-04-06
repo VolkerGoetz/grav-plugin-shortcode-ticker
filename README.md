@@ -5,20 +5,24 @@
 The "Shortcode News Ticker" plugin provides an animated, horizontal news ticker
 for the Grav CMS.
 
-It is based on Duncan Booth's pure CSS ticker
-from https://codepen.io/kupuguy/details/GNopye and 
-https://gist.github.com/kupuguy/d26a87c2e207c994ad88db1683feb7f2  
-Copyright (c) 2025 by Duncan Booth (https://codepen.io/kupuguy/pen/GNopye)
+Version 2.0.0 is based on Optimistic Web's Infinite Scroll Animation Effect
+Using Only CSS from https://codepen.io/optimisticweb/details/oNOBwBq and
+https://www.youtube.com/watch?v=bd9MLIb3DCg  
+Copyright (c) 2026 by Optimistic
+Web (https://codepen.io/optimisticweb/pen/oNOBwBq)
 
 ## Installation
 
-Typically a plugin should be installed via [GPM](https://learn.getgrav.org/17/cli-console/grav-cli-gpm) (Grav Package Manager):
+Typically, a plugin should be installed
+via [GPM](https://learn.getgrav.org/17/cli-console/grav-cli-gpm) (Grav Package
+Manager):
 
 ```
 $ bin/gpm install shortcode-ticker
 ```
 
-Alternatively it can be installed via the [Admin Plugin](https://learn.getgrav.org/17/admin-panel/plugins)
+Alternatively it can be installed via
+the [Admin Plugin](https://learn.getgrav.org/17/admin-panel/plugins)
 
 ## Usage
 

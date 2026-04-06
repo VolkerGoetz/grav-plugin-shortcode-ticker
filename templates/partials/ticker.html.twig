@@ -1,13 +1,20 @@
 {% if ticker_items is not empty %}
-    <div class="ticker-wrap"
+    <div class="ticker" id="{{ ticker_id }}"
             {% if background_color is not empty %}
-                style="background-color: {{ background_color }} !important"
+                style="background-color: {{ background_color }} !important;"
             {% endif %}
     >
-        <div class="ticker" id="{{ ticker_id }}" style="-webkit-animation-duration: {{ duration }}; animation-duration: {{ duration }};">
+        <ul style="animation-duration: {{ duration }};">
+            <li>&ZeroWidthSpace;</li>
             {% for item in ticker_items %}
-                <div class="ticker__item">{{ item|raw }}</div>
+                <li>{{ item|raw }}</li>
             {% endfor %}
-        </div>
+        </ul>
+        <ul aria-hidden="true" style="animation-duration: {{ duration }};">
+            <li>&ZeroWidthSpace;</li>
+            {% for item in ticker_items %}
+                <li>{{ item|raw }}</li>
+            {% endfor %}
+        </ul>
     </div>
 {% endif %}

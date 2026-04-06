@@ -22,6 +22,8 @@ class TickerShortcode extends Shortcode
             $content = str_replace("\n", " ", $content);
             $content = str_replace("<ul>", "", $content);
             $content = str_replace("</ul>", "", $content);
+            $content = str_replace("<p>", " ", $content);
+            $content = str_replace("</p>", " ", $content);
             $content = str_replace("</li>", "", $content);
 
             $items = array_filter(explode("<li>", $content), fn($value) => trim($value) !== '');
